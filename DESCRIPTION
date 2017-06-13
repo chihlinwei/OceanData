@@ -1,8 +1,8 @@
 Package: OceanData
 Type: Package
 Title: Tools to download and extract oceanographic data from various sources
-Version: 1.0
-Date: 2014-04-19
+Version: 1.1
+Date: 2017-06-10
 Author: Chih-Lin Wei
 Maintainer: Chih-Lin Wei <chihlinwei@gmail.com>
 Description: Tools to download oceanographic data from various sources and
@@ -15,7 +15,9 @@ Depends:
     rgdal,
     gdalUtils,
     R.utils,
-    timeDate
+    timeDate,
+    foreach,
+    doSNOW
 Imports:
     gdalUtils,
     R.utils,
@@ -24,3 +26,4 @@ Suggests:
     RCurl,
     foreach,
     doSNOW
+RoxygenNote: 6.0.1
