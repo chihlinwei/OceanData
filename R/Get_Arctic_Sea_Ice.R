@@ -2,15 +2,16 @@
 #' 
 #' Download National Snow and Ice Data Center (NSIDC) Arctic Sea Ice Concentrations binary flat file and then convert to a raster object
 #' 
+#' @details This function dowloads the northern hemisphere NSIDC Sea Ice Concentrations from Nimbus-7 SMMR 
+#' and DMSP SSM/I-SSMIS Passive Microwave Data (\url{http://nsidc.org/data/nsidc-0051.html}). 
+#' Function was Modified from codes written by Tony Fischbach at Walrus Research Program, Alaska Science Center, USGS. 
+#' Metadata information for the northern hemisphere sea ice data is available at \url{https://support.nsidc.org/entries/21680984-How-do-I-import-the-0051-sea-ice-concentration-data-into-ArcGIS-}  
+#' 
 #' @param url A character string naming the URL of a binary file to be downloaded
 #' @param x Raster* object defining the spatial extent, resolution and projection of sea ice data 
 #' to be retrived. If not provide, returning full data set.
 #' @param outdir output directory to write raster file
 #' @param plot Logical, whether or not to plot the output raster
-#' @details This function dowloads the northern hemisphere NSIDC Sea Ice Concentrations from Nimbus-7 SMMR 
-#' and DMSP SSM/I-SSMIS Passive Microwave Data (\url{http://nsidc.org/data/nsidc-0051.html}). 
-#' Function was Modified from codes written by Tony Fischbach at Walrus Research Program, Alaska Science Center, USGS. 
-#' Metadata information for the northern hemisphere sea ice data is available at \url{https://support.nsidc.org/entries/21680984-How-do-I-import-the-0051-sea-ice-concentration-data-into-ArcGIS-}  
 #' @return a raster object
 #' @author Chih-Lin Wei <chihlinwei@@gmail.com>
 #' @export
