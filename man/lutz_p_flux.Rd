@@ -42,6 +42,28 @@ Convert mean and seasonal index of primary production and export depth to export
 \item \code{p.ratio}: Annual Particulate Organic Carbon Flux to Depth Normalized to Overlying Production
 }}
 
+\examples{
+# Seasonal variation index of NPP (SD/mean)
+npp_svi <- 0.2789988
+
+# Mean NPP (mgC/m2/day)
+npp_mean <- 294.2888
+
+# Mean chlorophyll concentrations (mg/m3)
+chl_mean <- 0.123846
+
+# Euphotic depth (m)
+z_eu <- case1_z_eu(chl_mean)
+
+# Water depth (m)
+z <- 3115.12
+
+# Export depth (m)
+z_ex <- z-z_eu
+
+# Lutz et al. (2007) POC flux (mgC/m2/day)
+lutz_p_flux(npp_mean, npp_svi, z_ex)
+}
 \references{
 Lutz MJ, Caldeira K, Dunbar RB, Behrenfeld MJ (2007) Seasonal rhythms of net primary production and particulate organic carbon flux to depth describe the efficiency of biological pump in the global ocean. Journal of Geophysical Research: Oceans 112:C10011
 }
