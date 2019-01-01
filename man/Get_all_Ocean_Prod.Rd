@@ -4,7 +4,8 @@
 \alias{Get_all_Ocean_Prod}
 \title{Download all SeaWiFS or MODIS HDF4 file from Ocean Productivity Web page}
 \usage{
-Get_all_Ocean_Prod(url_list, ts, x = NULL, outdir = NULL, plot = FALSE)
+Get_all_Ocean_Prod(url_list, ts, x = NULL, outdir = NULL,
+  plot = FALSE)
 }
 \arguments{
 \item{url_list}{A list string for each variable naming the time-series URLs of HDF4 file to be downloaded.

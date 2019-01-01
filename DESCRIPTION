@@ -1,8 +1,8 @@
 Package: OceanData
 Type: Package
 Title: Tools to download and extract oceanographic data from various sources
-Version: 1.1
-Date: 2017-06-10
+Version: 1.2
+Date: 2019-01-01
 Author: Chih-Lin Wei
 Maintainer: Chih-Lin Wei <chihlinwei@gmail.com>
 Description: Tools to download oceanographic data from various sources and
@@ -10,7 +10,7 @@ Description: Tools to download oceanographic data from various sources and
     variables with given sampling year, month and coordinates.
 License: GPL (>= 2)
 Depends:
-    R (>= 3.3.2),
+    R (>= 3.5.1),
     raster,
     rgdal,
     gdalUtils,
@@ -19,11 +19,11 @@ Depends:
     foreach,
     doSNOW
 Imports:
+    raster,
+    rgdal,
     gdalUtils,
     R.utils,
-    timeDate
-Suggests:
-    RCurl,
+    timeDate,
     foreach,
     doSNOW
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
