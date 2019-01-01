@@ -26,4 +26,6 @@ Imports:
     timeDate,
     foreach,
     doSNOW
+Suggests:
+    timeDate
 RoxygenNote: 6.1.1

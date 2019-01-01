@@ -9,8 +9,8 @@
 #' character string "quarter" that is equivalent to "3 months".
 #' A number, taken to be in seconds.
 #' A object of class 'difftime'
-#' @param ... Arguments passed to \link[timeDate]{timeSequence}
-#' @details This function's Arguments follow \link[timeDate]{timeSequence}
+#' @param ... Arguments passed to \code{\link[timeDate]{timeSequence}}
+#' @details This function's Arguments follow \code{\link[timeDate]{timeSequence}}
 #' @return a numeric vector of year plus day of year
 #' @author Chih-Lin Wei <chihlinwei@@gmail.com>
 #' @export

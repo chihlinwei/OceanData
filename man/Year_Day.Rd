@@ -7,7 +7,7 @@
 Year_Day(...)
 }
 \arguments{
-\item{...}{Arguments passed to \link[timeDate]{timeSequence}}
+\item{...}{Arguments passed to \code{\link[timeDate]{timeSequence}}}
 
 \item{from}{starting date, required.}
 
@@ -26,7 +26,7 @@ a numeric vector of year plus day of year
 Regularly spaced year plus day of year. This year day format is commonly used in NASS Ocean Color product
 }
 \details{
-This function's Arguments follow \link[timeDate]{timeSequence}
+This function's Arguments follow \code{\link[timeDate]{timeSequence}}
 }
 \examples{
 Year_Day("1998-01-01", "1999-12-01", by="month")
