@@ -3,7 +3,6 @@
 \docType{package}
 \name{OceanData}
 \alias{OceanData}
-\alias{OceanData-package}
 \title{Download and extract oceanographic data from various online sources}
 \description{
 OceanData is developed for Canadian Healthy Oceans Network (CHONe) benthic biodiversity 

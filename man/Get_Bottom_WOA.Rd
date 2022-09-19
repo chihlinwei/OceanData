@@ -33,11 +33,11 @@ data are retained based on a template raster object.
 data(tmp)
 
 # Download January temperature data as example
-Get_Bottom_WOA("http://data.nodc.noaa.gov/woa/DATA_ANALYSIS/NP_REG_CLIMAT/DATA/temperature/0.25/t01an04.csv", 
+Get_Bottom_WOA("https://www.ncei.noaa.gov/data/oceans/woa/WOA18/DATA/temperature/csv/decav/0.25/woa18_decav_t01an04.csv.gz", 
 tmp, plot=TRUE) 
 
 #Download monthly near-bottom temperature
-urls <- paste("http://data.nodc.noaa.gov/woa/DATA_ANALYSIS/NP_REG_CLIMAT/DATA/temperature/0.25/t", 
+urls <- paste("https://www.ncei.noaa.gov/data/oceans/woa/WOA18/DATA/temperature/csv/decav/0.25/woa18_decav_t", 
               c(paste(0, 1:9, sep=""), 10:12), "an04.csv", sep="")
 
 # Raster template of Canadian Arctic

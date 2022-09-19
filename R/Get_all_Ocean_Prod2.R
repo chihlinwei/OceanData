@@ -1,0 +1,53 @@
+#' Download multiple SeaWiFS or MODIS HDF4 file from Ocean Productivity Web page using ncdf4 package
+#' 
+#' Download multiple SeaWiFS or MODIS HDF4 file from Ocean Productivity Web page and then convert to a raster object
+#' 
+#' @param url_list A list string for each variable naming the time-series URLs of HDF4 file to be downloaded.
+#' The names of the url_list (\code{names(url_list)}) should be given as a vector of variable names.
+#' @param ts The number of urls to be download in url_list
+#' to be retrived. If not provide, returning full data set.
+#' @param outdir output directory to write raster file
+#' @details This is an R wrapper for the \code{\link{Get_Ocean_Prod2}} functions. This function downloads multiple HDF4 files from Ocean Productivity Web page \url{http://www.science.oregonstate.edu/ocean.productivity/}
+#' @return a raster object
+#' @author Chih-Lin Wei <chihlinwei@@gmail.com>
+#' @export
+#' @examples 
+#' #### Get chl & vgpm from 2002-07 to 2021-12 (using MODIS) 
+#' # Create a folder to output raster bricks 
+#' folder <- "Mothly_Ocean_Productivity_MODIS_Standard_VGPM_2002_2021"
+#' dir.create(folder)
+#' # Year and day of year by month from 2002-07-01 to 2021-12-01
+#' modis <- Year_Day("2002-07-01", "2021-12-01", by="month") # MODIS time series
+#' 
+#' # URLs for each variable
+#' # The url path may change depending on the NASA Ocean Color reprocessing version
+#' # Check http://www.science.oregonstate.edu/ocean.productivity/ before using the following examplea
+#' 
+#' # Chlorophyll concentration
+#' chl <- paste("http://orca.science.oregonstate.edu/data/2x4/monthly/chl.modis.r2018/hdf/chl", modis, "hdf.gz", sep=".")
+#' 
+#' # Vertical General Production model
+#' vgpm <- paste("http://orca.science.oregonstate.edu/data/2x4/monthly/vgpm.r2018.m.chl.m.sst/hdf/vgpm", modis, "hdf.gz", sep=".")
+#' 
+#' url_list <- list(chl, vgpm)
+#' names(url_list) <- c("chl", "vgpm")
+#' 
+#' # No data in August and September 2020
+#' for(i in c(1:217, 220:234)) Get_all_Ocean_Prod2(url_list, ts=i, outdir=folder)
+
+Get_all_Ocean_Prod2 <- 
+  function(url_list, ts, outdir=NULL){
+    v <- brick()
+    for(i in 1:length(url_list)){
+      url <- url_list[[i]][ts]
+      s <- Get_Ocean_Prod2(url)
+      v <- addLayer(v, s)
+    }
+    names(v) <- names(url_list)
+    
+    #Save the raster brick 
+    if(!is.null(outdir)){
+      filename <- paste(unlist(strsplit(basename(url), split="[.]"))[2], "grd" , sep = ".")
+      writeRaster(v, paste(outdir, filename, sep="/"), format = "raster", overwrite=TRUE)
+    } 
+  }

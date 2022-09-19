@@ -4,7 +4,9 @@
 \name{loc}
 \alias{loc}
 \title{Megabenthos sampling location in the Canadian Arctic}
-\format{SpatialPointsDataFrame}
+\format{
+SpatialPointsDataFrame
+}
 \description{
 A SpatialPointsDataFrame showing Megabenthos sampling locations in Sinusoidal Eaqual area projection.
 }

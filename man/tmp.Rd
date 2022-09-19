@@ -4,7 +4,9 @@
 \name{tmp}
 \alias{tmp}
 \title{A raster template of the Canadian Arctic}
-\format{A rasterLayer object}
+\format{
+A rasterLayer object
+}
 \description{
 A raster dataset showing Canadian Arctic between Longitude -140 to -50 and latitude 65 to 80.
  The raster are in Sinusoidal Eaqual area projection with grid resolution of 9.28km.

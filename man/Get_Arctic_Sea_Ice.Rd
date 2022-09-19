@@ -43,7 +43,7 @@ library(doSNOW)
 
 url<-c("ftp://sidads.colorado.edu/pub/DATASETS/nsidc0051_gsfc_nasateam_seaice/final-gsfc/north/monthly/")
 filenames = getURL(url, ftp.use.epsv = FALSE, ftplistonly = TRUE, crlf = TRUE) 
-filenames = paste(url, strsplit(filenames, "\\r*\\n")[[1]], sep = "")
+filenames = paste(url, strsplit(filenames, "\r*\n")[[1]], sep = "")
 
 # Create a folder to save raster files
 folder <- "../Arctic_ocean_data/Sea_Ice_Nimbus-7_SMMR_DMSP_SSMI_SSMIS/" 

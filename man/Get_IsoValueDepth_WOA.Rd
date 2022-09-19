@@ -4,8 +4,13 @@
 \alias{Get_IsoValueDepth_WOA}
 \title{Download climatology data from World Ocean Atlas and calculate the iso-value depth}
 \usage{
-Get_IsoValueDepth_WOA(url, IsoValue = 10, x = NULL, outdir = NULL,
-  plot = FALSE)
+Get_IsoValueDepth_WOA(
+  url,
+  IsoValue = 10,
+  x = NULL,
+  outdir = NULL,
+  plot = FALSE
+)
 }
 \arguments{
 \item{url}{A character string naming the URL of a CSV file to be downloaded}

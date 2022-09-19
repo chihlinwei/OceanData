@@ -46,7 +46,7 @@ Pass <- "nord.a13"
 url <- paste("ftp://", User, ":", Pass, "@ftp.uqar.ca/Arcticnet/donnees_pour_VRoy/", sep="")
 
 filenames = getURL(url, ftp.use.epsv = FALSE, ftplistonly = TRUE, crlf = TRUE) 
-filenames = paste(url, strsplit(filenames, "\\r*\\n")[[1]], sep = "") 
+filenames = paste(url, strsplit(filenames, "\r*\n")[[1]], sep = "") 
 
 # Create a folder to save raster file
 folder <- "../Arctic_ocean_data/Productivity_Belanger_2013/" 

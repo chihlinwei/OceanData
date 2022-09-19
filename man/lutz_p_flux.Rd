@@ -33,15 +33,15 @@ Convert mean and seasonal index of primary production and export depth to export
 }
 \section{Functions}{
 \itemize{
-\item \code{prd}: the labile fraction of export
+\item \code{prd()}: the labile fraction of export
 
-\item \code{rld}: remineralization length scale
+\item \code{rld()}: remineralization length scale
 
-\item \code{prr}: rapidly sinking fraction of export
+\item \code{prr()}: rapidly sinking fraction of export
 
-\item \code{p.ratio}: Annual Particulate Organic Carbon Flux to Depth Normalized to Overlying Production
+\item \code{p.ratio()}: Annual Particulate Organic Carbon Flux to Depth Normalized to Overlying Production
+
 }}
-
 \examples{
 # Seasonal variation index of NPP (SD/mean)
 npp_svi <- 0.2789988
