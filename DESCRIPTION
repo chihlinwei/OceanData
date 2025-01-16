@@ -12,8 +12,6 @@ License: GPL (>= 2)
 Depends:
     R (>= 3.5.1),
     raster,
-    rgdal,
-    gdalUtils,
     R.utils,
     timeDate,
     foreach,
@@ -21,8 +19,6 @@ Depends:
     ncdf4
 Imports:
     raster,
-    rgdal,
-    gdalUtils,
     R.utils,
     timeDate,
     foreach,

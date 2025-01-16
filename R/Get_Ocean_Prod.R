@@ -26,8 +26,9 @@ Get_Ocean_Prod <-
     src <- sub(".gz", "", dest)
     gunzip(dest, src)
     dst <- basename(sub("hdf", "tif", src))
-    r <-gdal_translate(src, dst, a_srs = "+proj=longlat +datum=WGS84",
-                            a_nodata=-9999, output_Raster=TRUE)
+    gdal_translate(src, dst, a_srs = "+proj=longlat +datum=WGS84",
+                            a_nodata=-9999)
+    r <- raster(dst)
     extent(r) <- extent(c(-180, 180, -90, 90))
     file.remove(src)
     file.remove(dst)
